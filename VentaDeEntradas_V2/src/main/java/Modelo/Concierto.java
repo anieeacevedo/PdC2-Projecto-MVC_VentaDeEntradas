@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Concierto {
     private String nombre;
     private Date fecha;
-    private List<Zona> zonas; // Composición
+    private List<Zona> zonas;
 
     public Concierto() {
         this.zonas = new ArrayList<>();
@@ -19,5 +19,14 @@ public class Concierto {
 
     public boolean eliminarZona(String nombre) {
         return false;
+    }
+
+    // ========== AGREGAR ESTE GETTER ==========
+    public List<Zona> getZonas() {
+        return zonas;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }
