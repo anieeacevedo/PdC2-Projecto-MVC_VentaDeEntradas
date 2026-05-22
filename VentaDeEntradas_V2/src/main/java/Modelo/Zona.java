@@ -7,21 +7,21 @@ public class Zona {
     private String nombre;
     private int capacidad;
     private int precio;
-    private List<Entrada> entradas; // Composición
+    private List<Entrada> entradas;
 
-    public Zona() {
+    public Zona(String nombre, int capacidad, int precio) {
+        this.nombre = nombre;
+        this.capacidad = capacidad;
+        this.precio = precio;
         this.entradas = new ArrayList<>();
     }
 
-    private boolean generarEntradas() {
-        return false;
+    public void reducirCapacidad(int cantidad) {
+        this.capacidad -= cantidad;
     }
 
-    public Entrada[] mostrarEntrada() {
-        return new Entrada[0];
-    }
-
-    public Entrada[] venderEntrada(int numero) {
-        return new Entrada[0];
-    }
+    public String getNombre() { return nombre; }
+    public int getCapacidad() { return capacidad; }
+    public int getPrecio() { return precio; }
+    public List<Entrada> getEntradas() { return entradas; }
 }
