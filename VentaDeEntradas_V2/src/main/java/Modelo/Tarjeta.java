@@ -6,7 +6,6 @@ public class Tarjeta {
     private String fecha;
     private int CVV;
 
-    // En el diagrama figura "Type", lo mapeamos como un Object genérico
     public Object method() {
         return null;
     }
