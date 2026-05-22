@@ -21,7 +21,6 @@ public class Concierto {
         return false;
     }
 
-    // ========== AGREGAR ESTE GETTER ==========
     public List<Zona> getZonas() {
         return zonas;
     }
