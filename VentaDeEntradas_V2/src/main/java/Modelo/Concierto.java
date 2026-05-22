@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Concierto {
-    private String nombre;
+    private String nombre; //Atributos
     private Date fecha;
     private List<Zona> zonas;
 
