@@ -10,12 +10,10 @@ public class SistemaVentasControlador {
     private Usuario administrador;
 
     public SistemaVentasControlador() {
-        // Datos de prueba para el flujo
         this.concierto = new Concierto();
         this.clienteActual = new Cliente();
         this.administrador = new Usuario();
         
-        // Se agrega manualmente objetos Zona a la lista interna para la simulación)
         this.concierto.getZonas().add(new Zona("VIP", 10, 150));
         this.concierto.getZonas().add(new Zona("General", 50, 50));
     }
@@ -25,9 +23,9 @@ public class SistemaVentasControlador {
         return concierto.getZonas();
     }
 
-    // Procesa el flujo de compra de entradas
+    // Compra de entradas
     public String procesarCompra(String nombreZona, int cantidadEntradas) {
-        // Buscar la zona seleccionada
+        // Busca la zona seleccionada
         Zona zonaSeleccionada = null;
         for (Zona z : concierto.getZonas()) {
             if (z.getNombre().equalsIgnoreCase(nombreZona)) {
@@ -46,7 +44,7 @@ public class SistemaVentasControlador {
             entradasAComprar.add(new Entrada(100 + i, zonaSeleccionada));
         }
 
-        // Intentar realizar la operación en el Modelo capturando las excepciones
+        // Capturalas excepciones
         try {
             boolean exito = clienteActual.comprarEntradas(zonaSeleccionada, entradasAComprar);
             if (exito) {
